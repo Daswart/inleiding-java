@@ -24,6 +24,6 @@ public class Opdracht46 extends Applet {
 
         g.setColor(Color.white);
         g.fillRect(495, 420, 10, 400 );
-
+        g.setColor(Color.black);
     }
 }
