@@ -5,27 +5,39 @@ import java.awt.*;
 
 public class Opdracht44 extends Applet{
     public void init() {
+
     }
 
     public void paint(Graphics g) {
         setBackground(Color.white);
         g.setColor(Color.black);
-        g.drawLine(20, 20, 20, 400);
-        g.drawLine(20, 400,400, 400);
+        g.drawLine(200, 800, 1000, 800);
+        g.drawLine(200, 800, 200, 20);
+
+        g.drawString("0", 190, 800 );
+        g.drawString("20", 180, 644 );
+        g.drawString("40", 180, 488 );
+        g.drawString("60", 180, 332 );
+        g.drawString("80", 180, 176 );
+        g.drawString("100", 180, 20 );
+        g.drawString("kg", 190, 820);
+
 
         g.setColor(Color.red);
-        g.fillRect(40, 230, 40, 170);
+        g.fillRect(266, 488, 50, 312);
+        g.drawString("Valerie", 266, 820);
 
         g.setColor(Color.blue);
-        g.fillRect(180, 20, 40, 380);
+        g.fillRect(532, 20, 50, 780);
+        g.drawString("Jeroen", 532, 820);
 
         g.setColor(Color.green);
-        g.fillRect(320, 60, 40, 340);
+        g.fillRect(798, 176, 50, 624);
+        g.drawString("Hans", 798, 820);
 
-        g.setColor(Color.black);
-        g.drawString("Valerie", 40, 420);
-        g.drawString("Jeroen", 180, 420);
-        g.drawString("Hans", 320, 420);
+
+
+
 
 
 

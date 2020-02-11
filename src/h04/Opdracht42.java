@@ -13,9 +13,9 @@ public class Opdracht42 extends Applet{
         g.drawRect(700,400,500,500);
         g.drawLine(950, 0, 700, 400);
         g.drawLine(950, 0, 1200, 400);
-        g.drawRect(150, 150, 25, 50);
-        g.drawRect(950, 780, 70, 120);
+        g.drawRect(950, 780, 70, 120); //deur
         g.drawRect(750, 500, 100, 100);
+        g.drawOval(955, 830, 20, 20);
 
 
 
