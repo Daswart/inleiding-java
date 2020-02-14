@@ -43,7 +43,7 @@ public class Opdracht51 extends Applet {
         //cirkel
         g.setColor(lijnkleur);
         g.drawOval(420, 140, hoogte, hoogte);
-// test
+
     }
 }
 
