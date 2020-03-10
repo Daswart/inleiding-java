@@ -10,7 +10,7 @@ import java.awt.event.*;
 
 
 public class Opdracht81 extends Applet {
-
+    //declareren
     TextField tekstvak;
     Label label;
     Button knop;
