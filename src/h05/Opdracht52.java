@@ -10,7 +10,7 @@ public class Opdracht52 extends Applet {
 
 
     public void init() {
-        gewicht1 =  66;
+        gewicht1 =  70;
         gewicht2 =  80;
         gewicht3 =  75;
     }
