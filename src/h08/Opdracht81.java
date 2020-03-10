@@ -20,30 +20,30 @@ public class Opdracht81 extends Applet {
 
 
     public void init() {
+        label = new Label("Type iets naar keuze");
+        add(label);
+
         tekstvak = new TextField("", 30);
+        add(tekstvak);
 
         knop = new Button("Ok");
         knop.addActionListener(new OKknopListener());
         add(knop);
 
+
         knop2 = new Button("reset");
-
-
         knop2.addActionListener(new resetKnopListener());
-
-        label = new Label("Type iets naar keuze");
+        add(knop2);
 
         s = "";
 
-        add(label);
-        add(tekstvak);
 
-        add(knop2);
+
     }
 
 
     public void paint(Graphics g) {
-    //g.drawString(s, 50, 90);
+    g.drawString(s, 50, 90);
 
 
     }
@@ -64,7 +64,7 @@ public class Opdracht81 extends Applet {
         @Override
         public void actionPerformed(ActionEvent e) {
             tekstvak.setText("");
-
+            s = "";
 
             repaint();
         }
