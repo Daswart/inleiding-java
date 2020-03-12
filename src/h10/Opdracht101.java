@@ -43,7 +43,7 @@ public class Opdracht101 extends Applet {
     class TekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             s = tekstvak.getText();
-//            getal = Integer.parseInt(s);
+
             if (Integer.parseInt(s) >= getal) {
                 getal = Integer.parseInt(s);
                 hogereScore = Integer.toString(getal);
