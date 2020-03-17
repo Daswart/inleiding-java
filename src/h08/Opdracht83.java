@@ -10,15 +10,16 @@ public class Opdracht83 extends Applet {
     Button prijsButton;
     Button refreshButton;
     String s;
-    String stringPrijs;
     String stringBTW;
-    double bedrag;
-    double BTW;
-    double inclBTW;
+    String stringInclBTW;
+    Double bedrag;
+    Double BTW;
+    Double inclBTW;
 
     public void init(){
         tekstvak = new TextField(10);
         add(tekstvak);
+        tekstvak.addActionListener(new PrijsButtonListener());
 
         prijsButton = new Button("bereken prijs");
         prijsButton.addActionListener(new PrijsButtonListener());
@@ -27,6 +28,13 @@ public class Opdracht83 extends Applet {
         refreshButton = new Button("refresh");
         refreshButton.addActionListener(new RefreshButtonListener());
         add (refreshButton);
+
+        stringBTW = "";
+        stringInclBTW = "";
+
+
+
+
 
 
 
@@ -41,21 +49,31 @@ public class Opdracht83 extends Applet {
             bedrag = Double.parseDouble(s);
             BTW = bedrag/100 * 21;
             inclBTW = bedrag + BTW;
-            stringPrijs = "de prijs incl 21% BTW = ";
-            stringBTW = "de btw = ";
+
+            stringBTW= Double.toString(BTW);
+            stringInclBTW = Double.toString(inclBTW);
+
+            ;
             repaint();
         }
 
     }
     class RefreshButtonListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
+            s = tekstvak.getText();
+            tekstvak.setText("");
+
+            stringBTW = "";
+            stringInclBTW = "";
+
+            repaint();
 
         }
 
     }
 public void paint(Graphics g){
-        g.drawString( stringBTW + " " + BTW, 50, 60);
-        g.drawString(stringPrijs + " " + inclBTW, 50, 80);
+        g.drawString( "De BTW is " +  stringBTW, 50, 60);
+        g.drawString("De prijs inlc BTW is " + stringInclBTW, 50, 80);
 
 }
 }

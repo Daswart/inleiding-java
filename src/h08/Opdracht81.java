@@ -4,20 +4,13 @@ import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.*;
 
-
-
-
-
-
 public class Opdracht81 extends Applet {
     //declareren
     TextField tekstvak;
     Label label;
     Button knop;
     Button knop2;
-    String s;
-
-
+    String tekst;
 
     public void init() {
         label = new Label("Type iets naar keuze");
@@ -35,39 +28,32 @@ public class Opdracht81 extends Applet {
         knop2.addActionListener(new resetKnopListener());
         add(knop2);
 
-        s = "";
-
-
-
+        tekst = "";
     }
 
+    class OKknopListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            tekst = tekstvak.getText();
 
-    public void paint(Graphics g) {
-    g.drawString(s, 50, 90);
+            repaint();
 
-
-    }
-
-        class OKknopListener implements ActionListener {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    s = tekstvak.getText();
-                    repaint();
-
-
-
+            System.out.println(tekst);
                 }
-
-
     }
+
     class resetKnopListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             tekstvak.setText("");
-            s = "";
 
             repaint();
-        }
 
+
+        }
+    }
+
+    public void paint(Graphics g) {
+        g.drawString(tekst, 50, 90);
     }
 }
