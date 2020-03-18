@@ -17,6 +17,7 @@ public class Opdracht81 extends Applet {
         add(label);
 
         tekstvak = new TextField("", 30);
+        tekstvak.addActionListener(new OKknopListener());
         add(tekstvak);
 
         knop = new Button("Ok");
@@ -38,7 +39,7 @@ public class Opdracht81 extends Applet {
 
             repaint();
 
-            System.out.println(tekst);
+
                 }
     }
 
@@ -50,8 +51,12 @@ public class Opdracht81 extends Applet {
             repaint();
 
 
+
+
         }
+
     }
+
 
     public void paint(Graphics g) {
         g.drawString(tekst, 50, 90);

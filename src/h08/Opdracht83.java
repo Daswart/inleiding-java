@@ -17,7 +17,7 @@ public class Opdracht83 extends Applet {
     Double inclBTW;
 
     public void init(){
-        tekstvak = new TextField(10);
+        tekstvak = new TextField("Vul hier het bedrag in",20);
         add(tekstvak);
         tekstvak.addActionListener(new PrijsButtonListener());
 
