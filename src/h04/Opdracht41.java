@@ -3,10 +3,12 @@ package h04;
 import java.applet.Applet;
 import java.awt.*;
 
+
 public class Opdracht41 extends Applet{
     public void init() {
     }
 
+    //tekenen van een gelijkbenige driehoek
     public void paint(Graphics g) {
         setBackground(Color.white);
         g.setColor(Color.black);

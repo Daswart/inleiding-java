@@ -4,12 +4,14 @@ import java.applet.Applet;
 import java.awt.*;
 
 public class Opdracht42 extends Applet{
+
+    //de afmetingen van de applet
     public void init() {
+        setSize(1800, 950);
     }
 
+    //teken een huis met tenminstte één raam en een deur
     public void paint(Graphics g) {
-        setBackground(Color.black);
-        g.setColor(Color.white);
         g.drawRect(700,400,500,500);
         g.drawLine(950, 0, 700, 400);
         g.drawLine(950, 0, 1200, 400);

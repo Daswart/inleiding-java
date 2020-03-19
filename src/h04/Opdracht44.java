@@ -6,17 +6,19 @@ import java.awt.*;
 
 public class Opdracht44 extends Applet{
 
-
+    //afmeting Applet
     public void init() {
+        setSize(1800, 950);
 
     }
 
+    //tekenen van een staafdiagram,
     public void paint(Graphics g) {
-        setBackground(Color.white);
-        g.setColor(Color.black);
+
         g.drawLine(200, 800, 1000, 800);
         g.drawLine(200, 800, 200, 20);
 
+        //getallen langs de y-as
         g.drawString("0", 190, 800 );
         g.drawString("20", 180, 644 );
         g.drawString("40", 180, 488 );
@@ -25,7 +27,7 @@ public class Opdracht44 extends Applet{
         g.drawString("100", 180, 20 );
         g.drawString("kg", 190, 820);
 
-
+        //de staven
         g.setColor(Color.red);
         g.fillRect(266, 488, 50, 312);
         g.drawString("Valerie", 266, 820);
