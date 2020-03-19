@@ -50,9 +50,12 @@ public class Opdracht101 extends Applet {
                 hogereScore = "De hoogste score is " + getal;
                 lageScore = "";
 
-            } else {
-                hogereScore = "De hoogste score is " + getal;
-                lageScore = "Voer een getal in die hoger is dan " + getal;
+            }
+
+            else {
+                hogereScore = "De hoogste score is " + getal +".";
+                lageScore = "Voer een getal in dat hoger is dan " + getal + ".";
+
 
             }
             repaint();
