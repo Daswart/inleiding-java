@@ -42,7 +42,7 @@ public class Main3 {
             System.out.println("Dit klopt niet! Het antwoord = " + antwoord + "\n\n" );
         }
 
-        //OPDRACHT 3.4
+        //OPDRACHT 3.3
         System.out.println("Opdracht 3.4 \n ");
         int random6 = (int) (Math.random() *13 + 0);
         switch (random6){
