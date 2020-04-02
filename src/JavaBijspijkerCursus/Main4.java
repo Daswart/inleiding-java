@@ -3,15 +3,16 @@ package JavaBijspijkerCursus;
 import java.util.Scanner;
 
 
-public class Main4 {
+public class  Main4 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        char userInput;
 
         //OPDRACHT 4.1
-        /*System.out.println("Opdracht 4.1\n");
+        System.out.println("Opdracht 4.1\n");
         System.out.print("Van welk karakter wil je de ASCII waarde weten? ");
-        char userInput = scanner.nextLine().charAt(0);
+        userInput = scanner.nextLine().charAt(0);
         int ascii = userInput;
         System.out.println("De ASCII waarde van het karakter " + userInput + " is " + ascii + "\n\n");
 
@@ -54,24 +55,33 @@ public class Main4 {
             }
         else {
             System.out.println("Het karakter is geen letter");
-        }*/
+        }
 
         //OPDRACHT 4.4
         System.out.println("Opdracht 4.4 \n");
-        System.out.println("Van welke letter wil je het nummer weten? ");
-        int userInput = scanner.nextLine().charAt(0);
-        userInput = Character.toUpperCase(userInput);
-        if (Character.isLetter(userInput)){
-            if (userInput >= 'A') {
+        System.out.print("Van welke letter wil je het nummer weten? ");
+        userInput = scanner.nextLine().toUpperCase().charAt(0);
+        if (Character.isLetter(userInput)) {
+            if (userInput >= 'A' && userInput < 'D') {
                 System.out.println("De letter " + userInput + " staat op de 2-toets.");
-
+            } else if (userInput >= 'D' && userInput < 'G') {
+                System.out.println("De letter " + userInput + " staat op de 3-toets.");
+            } else if (userInput >= 'G' && userInput < 'J') {
+                System.out.println("De letter " + userInput + " staat op de 4-toets.");
+            } else if (userInput >= 'J' && userInput < 'M') {
+                System.out.println("De letter " + userInput + " staat op de 5-toets.");
+            } else if (userInput >= 'M' && userInput < 'P') {
+                System.out.println("De letter " + userInput + " staat op de 6-toets.");
+            } else if (userInput >= 'P' && userInput < 'T') {
+                System.out.println("De letter " + userInput + " staat op de 7-toets.");
+            } else if (userInput >= 'T' && userInput < 'W') {
+                System.out.println("De letter " + userInput + " staat op de 8-toets.");
+            } else if (userInput >= 'W') {
+                System.out.println("De letter " + userInput + " staat op de 9-toets.");
             }
-
-
-            }
-
-
         }
     }
+}
+
 
 
