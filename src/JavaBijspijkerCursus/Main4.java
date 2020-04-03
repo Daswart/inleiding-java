@@ -1,5 +1,6 @@
 package JavaBijspijkerCursus;
 
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -9,7 +10,7 @@ public class  Main4 {
         Scanner scanner = new Scanner(System.in);
         char userInput;
 
-        //OPDRACHT 4.1
+        /*//OPDRACHT 4.1
         System.out.println("Opdracht 4.1\n");
         System.out.print("Van welk karakter wil je de ASCII waarde weten? ");
         userInput = scanner.nextLine().charAt(0);
@@ -46,20 +47,20 @@ public class  Main4 {
                 case 'O':
                 case 'u':
                 case 'U':
-                    System.out.println("De " + userInput + " is een klinker");
+                    System.out.println("De " + userInput + " is een klinker\n\n");
                     break;
                 default:
-                    System.out.println("De " + userInput + " is een medeklinker");
+                    System.out.println("De " + userInput + " is een medeklinker \n\n");
 
 
             }
         else {
-            System.out.println("Het karakter is geen letter");
+            System.out.println("Het karakter is geen letter \n\n ");
         }
 
         //OPDRACHT 4.4
         System.out.println("Opdracht 4.4 \n");
-        System.out.print("Van welke letter wil je het nummer weten? ");
+        System.out.print("Van welke letter wil je het waar het op T9 zit? ");
         userInput = scanner.nextLine().toUpperCase().charAt(0);
         if (Character.isLetter(userInput)) {
             if (userInput >= 'A' && userInput < 'D') {
@@ -79,7 +80,23 @@ public class  Main4 {
             } else if (userInput >= 'W') {
                 System.out.println("De letter " + userInput + " staat op de 9-toets.");
             }
-        }
+        }*/
+
+        //OPDRACHT 4.5
+        Scanner enter = new Scanner(System.in);
+        System.out.println("Opdracht 4.5 \n");
+        System.out.print("Druk op Enter voor een willekeurige letter: ");
+        enter.nextLine();
+        int random = (int) (Math.random() *27 + 0);
+        char randomChar = (char) (random + 'A');
+        System.out.println("Uw willekeurige letter is " + randomChar + "\n");
+
+        //OPDRACHT 4.6
+        System.out.println("Typ een String: ");
+        userInput = scanner.nextLine().charAt(0);
+        System.out.println(userInput);
+
+
     }
 }
 
