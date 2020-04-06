@@ -1,5 +1,6 @@
 package JavaBijspijkerCursus;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,7 +11,7 @@ public class  Main4 {
         Scanner scanner = new Scanner(System.in);
         char userInput;
 
-        /*//OPDRACHT 4.1
+        //OPDRACHT 4.1
         System.out.println("Opdracht 4.1\n");
         System.out.print("Van welk karakter wil je de ASCII waarde weten? ");
         userInput = scanner.nextLine().charAt(0);
@@ -64,23 +65,23 @@ public class  Main4 {
         userInput = scanner.nextLine().toUpperCase().charAt(0);
         if (Character.isLetter(userInput)) {
             if (userInput >= 'A' && userInput < 'D') {
-                System.out.println("De letter " + userInput + " staat op de 2-toets.");
+                System.out.println("De letter " + userInput + " staat op de 2-toets. \n\n");
             } else if (userInput >= 'D' && userInput < 'G') {
-                System.out.println("De letter " + userInput + " staat op de 3-toets.");
+                System.out.println("De letter " + userInput + " staat op de 3-toets. \n\n");
             } else if (userInput >= 'G' && userInput < 'J') {
-                System.out.println("De letter " + userInput + " staat op de 4-toets.");
+                System.out.println("De letter " + userInput + " staat op de 4-toets. \n\n");
             } else if (userInput >= 'J' && userInput < 'M') {
-                System.out.println("De letter " + userInput + " staat op de 5-toets.");
+                System.out.println("De letter " + userInput + " staat op de 5-toets. \n\n");
             } else if (userInput >= 'M' && userInput < 'P') {
-                System.out.println("De letter " + userInput + " staat op de 6-toets.");
+                System.out.println("De letter " + userInput + " staat op de 6-toets. \n\n");
             } else if (userInput >= 'P' && userInput < 'T') {
-                System.out.println("De letter " + userInput + " staat op de 7-toets.");
+                System.out.println("De letter " + userInput + " staat op de 7-toets. \n\n");
             } else if (userInput >= 'T' && userInput < 'W') {
-                System.out.println("De letter " + userInput + " staat op de 8-toets.");
+                System.out.println("De letter " + userInput + " staat op de 8-toets. \n\n ");
             } else if (userInput >= 'W') {
-                System.out.println("De letter " + userInput + " staat op de 9-toets.");
+                System.out.println("De letter " + userInput + " staat op de 9-toets. \n\n");
             }
-        }*/
+        }
 
         //OPDRACHT 4.5
         Scanner enter = new Scanner(System.in);
@@ -89,12 +90,33 @@ public class  Main4 {
         enter.nextLine();
         int random = (int) (Math.random() *27 + 0);
         char randomChar = (char) (random + 'A');
-        System.out.println("Uw willekeurige letter is " + randomChar + "\n");
+        System.out.println("Uw willekeurige letter is " + randomChar + "\n\n");
 
         //OPDRACHT 4.6
-        System.out.println("Typ een String: ");
-        userInput = scanner.nextLine().charAt(0);
-        System.out.println(userInput);
+        System.out.println("Opdracht 4.6 \n");
+        System.out.print("Typ een String: ");
+        String userInputString = scanner.nextLine();
+        int length = userInputString.length();
+        char firstLetter = userInputString.charAt(0);
+        char lastLetter = userInputString.charAt(userInputString.length() - 1);
+        System.out.println("De lengte van " + userInputString + " is " + length + ". \n\n");
+        System.out.println("Het eerste karakter is " + firstLetter + ". \n\n");
+        System.out.println("Het laatste karakter is " + lastLetter + ". \n\n" );
+
+
+        //OPDRACHT 4.7
+        System.out.println("Opdracht 4.7 \n");
+        System.out.print("Land 1 ");
+        String land1 = scanner.nextLine();
+        System.out.print("Land 2 ");
+        String land2 = scanner.nextLine();
+        System.out.print("Land 3 ");
+        String land3 = scanner.nextLine();
+        String[] landen = {land1, land2, land3,};
+        Arrays.sort(landen);
+        System.out.println(Arrays.toString(landen));
+
+
 
 
     }
