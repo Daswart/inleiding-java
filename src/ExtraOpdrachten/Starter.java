@@ -1,4 +1,4 @@
-package JavaBijspijkerCursus;
+package ExtraOpdrachten;
 
 import java.security.spec.RSAOtherPrimeInfo;
 
