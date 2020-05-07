@@ -7,6 +7,7 @@ public class Television {
     private int channel = 1;
     private int volumeLevel = 1;
     private boolean power = false;
+    static boolean proceed = true;
     static Scanner myScanner = new Scanner(System.in);
     static int userChoice = 0;
 
@@ -16,58 +17,65 @@ public class Television {
 
         Television myFirstTelevision = new Television();
 
-       while (!myFirstTelevision.power) {
-           System.out.println("\n1. ON");
-           System.out.println("2. OFF");
-           System.out.println("3. EXIT");
-           System.out.println("Druk op 1 om de TV aan te zetten");
-           userChoice = myScanner.nextInt();
-        switch(userChoice){
-            case 1:
-                myFirstTelevision.turnOn();
-                break;
-            case 2:
-                myFirstTelevision.turnOff();
-                break;
-            case 3:
-                System.exit(0);
-                break;
+     while (proceed) {
 
-        }
-       }
-        while (myFirstTelevision.power) {
-            myFirstTelevision.printMenu();
-            System.out.print("\nMaak uw keuze: ");
-            userChoice = myScanner.nextInt();
-            switch (userChoice) {
-                case 1:
-                    myFirstTelevision.turnOn();
+         while (!myFirstTelevision.power) {
+             myFirstTelevision.TVuit();
+             userChoice = myScanner.nextInt();
+             switch (userChoice) {
+                 case 1:
+                     myFirstTelevision.turnOn();
+                     break;
+                 case 2:
+                     myFirstTelevision.turnOff();
+                     break;
+                 case 3:
+                     System.exit(0);
+                     break;
 
-                    break;
-                case 2:
-                    myFirstTelevision.turnOff();
-                    break;
-                case 3:
-                    myFirstTelevision.channelUp();
-                    break;
-                case 4:
-                    myFirstTelevision.channelDown();
-                    break;
-                case 5:
-                    myFirstTelevision.volumeUp();
-                    break;
-                case 6:
-                    myFirstTelevision.volumeDown();
-                    break;
-                case 7:
-                    System.exit(0);
+             }
+         }
+         while (myFirstTelevision.power) {
+             myFirstTelevision.printMenu();
+             System.out.print("\nMaak uw keuze: ");
+             userChoice = myScanner.nextInt();
+             switch (userChoice) {
+                 case 1:
+                     myFirstTelevision.turnOn();
 
-
-            }
+                     break;
+                 case 2:
+                     myFirstTelevision.turnOff();
+                     break;
+                 case 3:
+                     myFirstTelevision.channelUp();
+                     break;
+                 case 4:
+                     myFirstTelevision.channelDown();
+                     break;
+                 case 5:
+                     myFirstTelevision.volumeUp();
+                     break;
+                 case 6:
+                     myFirstTelevision.volumeDown();
+                     break;
+                 case 7:
+                     System.exit(0);
 
 
-        }
+             }
 
+
+         }
+
+     }
+    }
+
+    public void TVuit() {
+        System.out.println("\n1. ON");
+        System.out.println("2. OFF");
+        System.out.println("3. EXIT");
+        System.out.println("Druk op 1 om de TV aan te zetten");
 
     }
 
