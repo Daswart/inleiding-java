@@ -16,18 +16,37 @@ public class Television {
 
         Television myFirstTelevision = new Television();
 
-        myFirstTelevision.turnOff();
+       while (!myFirstTelevision.power) {
+           System.out.println("\n1. ON");
+           System.out.println("2. OFF");
+           System.out.println("3. EXIT");
+           System.out.println("Druk op 1 om de TV aan te zetten");
+           userChoice = myScanner.nextInt();
+        switch(userChoice){
+            case 1:
+                myFirstTelevision.turnOn();
+                break;
+            case 2:
+                myFirstTelevision.turnOff();
+                break;
+            case 3:
+                System.exit(0);
+                break;
 
-        while (myFirstTelevision.power = true) {
+        }
+       }
+        while (myFirstTelevision.power) {
             myFirstTelevision.printMenu();
             System.out.print("\nMaak uw keuze: ");
             userChoice = myScanner.nextInt();
             switch (userChoice) {
                 case 1:
                     myFirstTelevision.turnOn();
+
                     break;
                 case 2:
                     myFirstTelevision.turnOff();
+                    break;
                 case 3:
                     myFirstTelevision.channelUp();
                     break;
