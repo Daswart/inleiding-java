@@ -75,70 +75,83 @@ public class Television {
         System.out.println("\n1. ON");
         System.out.println("2. OFF");
         System.out.println("3. EXIT");
-        System.out.println("Druk op 1 om de TV aan te zetten");
+        System.out.print("Druk op 1 om de TV aan te zetten: ");
 
     }
 
     public void turnOn() {
         power = true;
         System.out.println("\nDe TV staat nu aan.");
+        System.out.println("De TV staat nu op 1.");
+        System.out.println("Het volume staat nu op 1.");
 
     }
 
     public void turnOff() {
         power = false;
-        System.out.println("TV is off");
+        System.out.println("TV is uit.");
+        volumeLevel = 1;
+        channel = 1;
+
     }
 
     public void setChannel(int newChannel) {
-        if (power && newChannel >= 1 && newChannel <= 120) {
+        if (power && newChannel >= 1 && newChannel <= 10) {
             channel = newChannel;
 
         }
     }
 
     public void setVolume(int newVolumelevel) {
-        if (power && newVolumelevel >= 1 && newVolumelevel <= 7) {
+        if (power && newVolumelevel >= 1 && newVolumelevel <= 20) {
             volumeLevel = newVolumelevel;
-            System.out.println("Volumelevel = " + volumeLevel);
+            System.out.println("Volumelevel = " + volumeLevel +  ".");
         }
 
     }
 
     public void channelUp() {
-        if (power && channel < 120) {
+        if (power && channel < 10) {
             channel++;
-            System.out.println("De TV Staat nu op " + channel);
+            System.out.println("De TV staat nu op " + channel +  ".");
+        } else {
+                System.out.println("De TV staat nu op " + channel + "." + " Er bestaat geen kanaal hoger is dan 10!");
 
         }
+        System.out.println("Het volume staat op " + volumeLevel + ".");
     }
 
     public void channelDown() {
         if (power && channel > 1) {
             channel--;
-            System.out.println("Channel = " + channel);
+            System.out.println("De TV staat nu op " + channel +  ".");
         } else {
-            System.out.println("Channel = " + channel + "." + " Can't go lower!");
+            System.out.println("De TV staat nu op " + channel + "." + " Er bestaat geen kanaal lager dan 1!");
         }
+        System.out.println("Het volume staat op " + volumeLevel + ".");
     }
 
     public void volumeUp() {
-        if (power && volumeLevel < 120) {
+        if (power && volumeLevel < 20) {
             volumeLevel++;
-            System.out.println("Volume = " + volumeLevel);
-
+            System.out.println("Het volume staat nu op " + volumeLevel +  ".");
+        } else {
+            System.out.println("Het volume staat nu op " + volumeLevel + "." + " Het volume kan niet hoger dan 20!");
+        }
+        System.out.println("TV staat op " + channel + ".");
         }
 
 
-    }
+
 
     public void volumeDown() {
-        if (power && volumeLevel > 0) {
+        if (power && volumeLevel > 1) {
             volumeLevel--;
-            System.out.println("Volume = " + volumeLevel);
-        } else {
-            System.out.println("Volumelevel =");
+            System.out.println("Het volume staat nu op " + volumeLevel +  ".");
+         } else {
+        System.out.println("Het volume staat nu op " + volumeLevel + "." + " Het volume kan niet langer dan 1!");
         }
+        System.out.println("TV staat op " + channel + ".");
 
     }
 
