@@ -71,7 +71,7 @@ public class Main5 {
         aantalX++;
         proceed = true;
         while(proceed){
-            if(userInput == antwoord){
+            if(userInput == antwoord){ // Wanneer het antwoord van de gebruiker gelijk is aan het goede antwoord
                     aantalGoed++;
                     System.out.println("Het antwoord is goed! \n");
                     randomGetal1 = (int) (Math.random() * 100 +1);
@@ -81,7 +81,7 @@ public class Main5 {
                     aantalX++;
                     antwoord = randomGetal1 + randomGetal2;
             }
-            else if(userInput != antwoord){
+            else { // Wanneer de gebruiker een fout antwoord heeft gegeven
                 aantalFout++;
                 System.out.println("Het antwoord is fout!");
                 System.out.println("Het antwoord had moeten zijn: " + antwoord + "\n");
@@ -93,23 +93,23 @@ public class Main5 {
                 antwoord = randomGetal1 + randomGetal2;
 
             }
+            //laatste som is opglost en een goed antwoord is gegeven
             if( aantalX  == 10 && userInput == antwoord){
-                aantalGoed++;
-                if (aantalFout > aantalGoed){
+                if (aantalFout > aantalGoed){  //als er meer antwoorden fout dan goed zijn
                     System.out.println("Het antwoord is goed! \n");
                     System.out.println("je hebt " + aantalX + " keer gespeeld.");
                     System.out.println( "je hebt er " + aantalGoed + " goed" + " en " + aantalFout + " fout.");
                     System.out.println("Probeer het nog een keer!\n\n");
                     proceed = false;
                 }
-                else if (aantalGoed > aantalFout){
+                else if (aantalGoed > aantalFout){  //als er meer antwoorden goed dan fout zijn
                     System.out.println("Het antwoord is goed! \n");
                     System.out.println("je hebt " + aantalX + " keer gespeeld.");
                     System.out.println( "je hebt er " + aantalGoed + " goed" + " en " + aantalFout + " fout.");
                     System.out.println("Je bent geslaagd!\n\n");
                     proceed = false;
                 }
-                else{
+                else{ //als er evenveel vragen goed en fout zijn
                     System.out.println("Het antwoord is goed! \n");
                     System.out.println("je hebt " + aantalX + " keer gespeeld.");
                     System.out.println( "je hebt er " + aantalGoed + " goed" + " en " + aantalFout + " fout.");
@@ -117,9 +117,10 @@ public class Main5 {
                     proceed = false;
                 }
             }
+            //laatste som is opgelost en een fout antwoord is gegeven
             if (aantalX == 10 && userInput != antwoord){
                 aantalFout++;
-                if(aantalFout > aantalGoed){
+                if(aantalFout > aantalGoed){ //als er meer antwoorden fout dan goed zijn
                     System.out.println("Het antwoord is fout." );
                     System.out.println("Het antwoord had moeten zijn: " + antwoord + "\n");
                     System.out.println("je hebt " + aantalX + " keer gespeeld.");
@@ -127,7 +128,7 @@ public class Main5 {
                     System.out.println("Probeer het nog een keer! \n\n");
                     proceed = false;
                 }
-                else if(aantalGoed > aantalFout){
+                else if(aantalGoed > aantalFout){ //als er meer antwoorden goed dan fout zijn
                     System.out.println("Het antwoord is fout." );
                     System.out.println("Het antwoord had moeten zijn: " + antwoord + "\n");
                     System.out.println("je hebt " + aantalX + " keer gespeeld.");
@@ -135,7 +136,7 @@ public class Main5 {
                     System.out.println("Je bent geslaagd! \n\n");
                     proceed = false;
                 }
-                else{
+                else{ //als er evenveel vragen goed en fout zijn
                     System.out.println("Het antwoord is fout." );
                     System.out.println("Het antwoord had moeten zijn: " + antwoord + "\n");
                     System.out.println("je hebt " + aantalX + " keer gespeeld.");
